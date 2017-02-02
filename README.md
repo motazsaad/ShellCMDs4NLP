@@ -27,7 +27,9 @@ Useful shell commands for NLP people
 
 ##Extract sentences from sgm tag:
 ```perl -ne 'print $1."\n" if /<seg[^>]+>\s*(.*\S)\s*<.seg>/i;' < input > output```
+
 ```perl -ne '$string = $1."\n" if /<seg[^>]+>\s*(.*\S)\s*<.seg>/i;$string =~ s/^\s+//; $string =~ tr{\n}{ };print $string;' < input > output```
+
 ```perl -ne '$string = $1 if /<seg[^>]+>\s*(.*\S)\s*<.seg>/i;$string =~ s/^\s+//; $string =~ tr{\n}{ };print $string."\n";' < input > output```
 
 
@@ -52,4 +54,23 @@ Useful shell commands for NLP people
 ##count xml nodes 
 ```grep '</node_name>' yourfile.xml -o | wc -l```
 
+##get the 2nd line from multiple files. 
+```for i in *; do sed -n 2p "$i"; done```
 
+
+##display lines from 10 to 20 from a file: 
+```sed -n '10,20p' <filename>```
+
+
+## append line separator and combine files in one file 
+for i in dir/*; do cat $i ; printf 'SEPARATOR'; done > myfile.ext
+
+
+##remove space from file name
+```rename "s/\s+//g" *```
+
+
+##remove empty lines and \n from files 
+```sed -i '/^\s*$/d' *
+sed -i '/^[[:space:]]*$/d' *
+perl -i -p -e 's/\n/ /' *```
