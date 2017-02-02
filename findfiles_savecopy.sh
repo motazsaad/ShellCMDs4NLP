@@ -1,5 +1,5 @@
 #!/bin/bash
-# this script copy files from search results
+# this script find files save a copy
 #echo $1
 #echo $2
 #echo "$2"/"$(date "+%s")"_"$1"
