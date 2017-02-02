@@ -71,8 +71,15 @@ for i in dir/*; do cat $i ; printf 'SEPARATOR'; done > myfile.ext
 
 
 ##remove empty lines and \n from files 
-```sed -i '/^\s*$/d' *
+```sed -i '/^\s*$/d' *```
+```sed -i '/^[[:space:]]*$/d' *```
+```perl -i -p -e 's/\n/ /' *```
 
-sed -i '/^[[:space:]]*$/d' *
 
-perl -i -p -e 's/\n/ /' *```
+##replace match with something: replace string1 with string2 
+```sed -i 's/string1/string2/g' file```
+
+
+##clean linux swap:
+```sudo swapoff -a```
+```sudo swapon -a```
