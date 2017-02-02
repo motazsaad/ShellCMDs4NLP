@@ -2,7 +2,7 @@
 
 
 ## count vocabulary in a corpus.
-```cat files | tr ' ' '\n' | sort | uniq  | wc -l```
+```cat files | tr ' ' '\n' | sort | uniq  | wc -c```
 
 ##split a file:
 ```split -l 8 -a 4 -d file.ext```
