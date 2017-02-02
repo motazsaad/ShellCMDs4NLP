@@ -1,5 +1,4 @@
-# UsefulShellCommands4NLP
-Useful shell commands for NLP people 
+# Useful Shell Commands foe NLP people
 
 
 ## count vocabulary in a corpus.
