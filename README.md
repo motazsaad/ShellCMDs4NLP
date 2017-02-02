@@ -42,6 +42,14 @@ Useful shell commands for NLP people
 ```xargs -a ls.txt mv -t dir/```
 
 ##copy files in specific date: 
-```ls -l dir/* | grep 'Oct' | awk '{print $9}' | xargs cp -t dir/
+```ls -l dir/* | grep 'Oct' | awk '{print $9}' | xargs cp -t dir/```
+
+
+##split xml file nodes (one node in each file)
+```xml_split -l 1 dir/*```
+
+
+##count xml nodes 
+```grep '</node_name>' yourfile.xml -o | wc -l```
 
 
