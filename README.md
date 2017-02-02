@@ -23,3 +23,12 @@ Useful shell commands for NLP people
 
 ##Search inside text files:
 ```find -name "*" | xargs grep 'search keyword'```
+
+
+##Extract sentences from sgm tag:
+```perl -ne 'print $1."\n" if /<seg[^>]+>\s*(.*\S)\s*<.seg>/i;' < input > output
+
+perl -ne '$string = $1."\n" if /<seg[^>]+>\s*(.*\S)\s*<.seg>/i;$string =~ s/^\s+//; $string =~ tr{\n}{ };print $string;' < input > output
+
+perl -ne '$string = $1 if /<seg[^>]+>\s*(.*\S)\s*<.seg>/i;$string =~ s/^\s+//; $string =~ tr{\n}{ };print $string."\n";' < input > output```
+
