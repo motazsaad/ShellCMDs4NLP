@@ -72,5 +72,7 @@ for i in dir/*; do cat $i ; printf 'SEPARATOR'; done > myfile.ext
 
 ##remove empty lines and \n from files 
 ```sed -i '/^\s*$/d' *
+
 sed -i '/^[[:space:]]*$/d' *
+
 perl -i -p -e 's/\n/ /' *```
