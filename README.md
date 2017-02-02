@@ -5,7 +5,7 @@ Useful shell commands for NLP people
 ## count vocabulary in a corpus.
 ```cat files | tr ' ' '\n' | sort | uniq  | wc -l```
 
-##split afile:
+##split a file:
 ```split -l 8 -a 4 -d file.ext```
 
 ##split by 1 line and a prefix for files names: 
@@ -63,7 +63,7 @@ Useful shell commands for NLP people
 
 
 ## append line separator and combine files in one file 
-for i in dir/*; do cat $i ; printf 'SEPARATOR'; done > myfile.ext
+```for i in dir/*; do cat $i ; printf 'SEPARATOR'; done > myfile.ext```
 
 
 ##remove space from file name
