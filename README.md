@@ -85,3 +85,6 @@
 ```sudo swapoff -a```
 
 ```sudo swapon -a```
+
+## increase the volume of sound files 
+```for i in *; do lame --scale 3 "$i" ../out/"$i"; done```
