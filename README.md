@@ -1,4 +1,4 @@
-# Useful Linux Shell Commands foe NLP people
+# Useful Linux Shell Commands for NLP people
 
 
 ## count vocabulary in a corpus.
