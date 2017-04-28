@@ -117,6 +117,10 @@ ngram -lm corpus.lm -ppl test.txt -unk
 ngram-count -kndiscount -interpolate -text train-text.txt -lm your.lm
 ```
 
+-interpolaten option 
+    where n is 1, 2, 3, 4, 5, 6, 7, 8, or 9. Causes the discounted N-gram probability estimates at the specified order n to be interpolated with lower-order estimates. 
+    
+
 You can prune the model afterwards to reduce the size of the model 
 
 ```
