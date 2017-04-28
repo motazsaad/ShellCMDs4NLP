@@ -88,3 +88,42 @@
 
 ## increase the volume of sound files 
 ```for i in *; do lame --scale 3 "$i" ../out/"$i"; done```
+
+
+## Build and test language models using [SRILM](http://www.speech.sri.com/projects/srilm/) tool
+
+### Build language model 
+
+-unk
+    Build an ``open vocabulary'' LM, i.e., one that contains the unknown-word token as a regular word. The default is to remove the unknown word. 
+    
+-kndiscountn
+    where n is 1, 2, 3, 4, 5, 6, 7, 8, or 9. Use Chen and Goodman's modified Kneser-Ney discounting for N-grams of order n.
+    
+```
+ngram-count -order 3 -vocab corpus.vocab -text corpus.txt -lm corpus.lm -unk -kndiscount2 -kndiscount3
+```
+
+### Testing language model 
+ 
+```
+ngram -lm corpus.lm -ppl test.txt -unk
+```
+
+### ARPA model training with SRILM
+ Training with SRILM is easy. Morever, SRILM is the most advanced toolkit up to date. To train the model you can use the following command: 
+ 
+```
+ngram-count -kndiscount -interpolate -text train-text.txt -lm your.lm
+```
+
+You can prune the model afterwards to reduce the size of the model 
+
+```
+ngram -lm your.lm -prune 1e-8 -write-lm your-pruned.lm
+```
+
+After training it is worth to test the perplexity of the model on the test data
+```
+ngram -lm your.lm -ppl test-text.txt
+```
