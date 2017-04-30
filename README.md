@@ -131,3 +131,28 @@ After training it is worth to test the perplexity of the model on the test data
 ```
 ngram -lm your.lm -ppl test-text.txt
 ```
+
+***
+
+## ARPA model training with CMUCLMTK
+
+1) Prepare a reference text that will be used to generate the language model. The language model toolkit expects its input to be in the form of normalized text files, with utterances delimited by <s> and </s> tags.
+
+2) Generate the vocabulary file. This is a list of all the words in the file: 
+ 
+ ```text2wfreq < speech.txt | wfreq2vocab > corpus.vocab```
+ 
+ 
+3) You may want to edit the vocabulary file to remove words (numbers, misspellings, names). If you find misspellings, it is a good idea to fix them in the input transcript.
+
+4) If you want a closed vocabulary language model (a language model that has no provisions for unknown words), then you should remove sentences from your input transcript that contain words that are not in your vocabulary file.
+
+5) Generate the arpa format language model with the commands:
+
+```text2idngram -vocab corpus.vocab -idngram corpus.idngram < corpus.closed.txt```
+
+```idngram2lm -vocab_type 0 -idngram corpus.idngram -vocab corpus.vocab -arpa corpus.lm```
+
+ 6) Generate the CMU binary form (BIN) 
+ 
+```sphinx_lm_convert -i corpus.lm -o corpus.lm.bin```
