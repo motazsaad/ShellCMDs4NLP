@@ -4,8 +4,10 @@
 ## count vocabulary in a corpus.
 ```cat files | tr ' ' '\n' | sort | uniq  | wc -w```
 
-## split a file:
+## split a file (based on number of lines for each split):
 ```split -l 8 -a 4 -d file.ext```
+
+Here each file contains 8 lines  
 
 ## split by 1 line and a prefix for files names: 
 ```split -l 1 -a 4 -d file.ext a```
