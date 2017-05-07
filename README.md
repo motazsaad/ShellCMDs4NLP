@@ -4,6 +4,23 @@
 ## count vocabulary in a corpus.
 ```cat files | tr ' ' '\n' | sort | uniq  | wc -w```
 
+## extract a specific range of lines from a file 
+```sed -n 16224,16482p filename > newfile```
+
+## delete a specific range of lines from a file 
+```
+sed -i <file> -re '<start>,<end>d'
+```
+```
+sed -i filename -re '16224,16482d'
+```
+
+## delete only the whitespaces at the beginning of one single line
+```sed -i 's/^ *//' your_file```
+
+## delete all whitespaces
+```tr -d ' ' < input.txt > output.txt```
+
 ## split a file (based on number of lines for each split):
 ```split -l 8 -a 4 -d file.ext```
 
