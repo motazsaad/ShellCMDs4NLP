@@ -42,6 +42,8 @@ Here each file contains 8 lines
 ## Search inside text files:
 ```find -name "*" | xargs grep 'search keyword'```
 
+## Find files with a specific extension 
+```find -name "*.ext"```
 
 ## Extract sentences from sgm tag:
 ```perl -ne 'print $1."\n" if /<seg[^>]+>\s*(.*\S)\s*<.seg>/i;' < input > output```
