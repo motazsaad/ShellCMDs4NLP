@@ -18,6 +18,9 @@ sed -i filename -re '16224,16482d'
 ## delete only the whitespaces at the beginning of one single line
 ```sed -i 's/^ *//' your_file```
 
+## replace A with B in a file 
+```sed -i -e 's/A/B/g' file```
+
 ## delete all whitespaces
 ```tr -d ' ' < input.txt > output.txt```
 
@@ -44,6 +47,7 @@ Here each file contains 8 lines
 
 ## Find files with a specific extension 
 ```find -name "*.ext"```
+
 
 ## Extract sentences from sgm tag:
 ```perl -ne 'print $1."\n" if /<seg[^>]+>\s*(.*\S)\s*<.seg>/i;' < input > output```
