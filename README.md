@@ -133,8 +133,11 @@ for i in *.wav; do sox $i -r 16000 ../outdir/$i ; done
 
 ## convert file to unicode 
 1. determine file encoding 
+
 ```file -i file.ext```
+
 2. convert encoding  
+
 ```iconv -f from-encoding -t to-encoding inputfile(s) -o outputfile```
 
 
