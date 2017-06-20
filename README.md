@@ -21,6 +21,10 @@ sed -i filename -re '16224,16482d'
 ## replace A with B in a file 
 ```sed -i -e 's/A/B/g' file```
 
+-i option is used to edit in place on the file
+
+-e option indicates the expression/command to run, in this case s/. 
+
 ## delete all whitespaces
 ```tr -d ' ' < input.txt > output.txt```
 
@@ -104,6 +108,33 @@ Here each file contains 8 lines
 
 ## replace match with something: replace string1 with string2 
 ```sed -i 's/string1/string2/g' file```
+
+
+## list files with path 
+```ls -d dir/* ```
+
+## list files with file but without files extension 
+```
+ls -d dir/* | sed -n 's/\.ext//p'
+```
+
+## resembling wav file to 16k Hz
+```
+sox infile.wav -r 16000 outfile.wav
+```
+
+## resembling wav files to 16k Hz
+```
+cd wavdir
+for i in *.wav; do sox $i -r 16000 ../outdir/$i ; done
+```
+
+
+
+## convert file to unicode 
+1. determine file encoding 
+file -i file.ext
+2. iconv options -f from-encoding -t to-encoding inputfile(s) -o outputfile
 
 
 ## clean linux swap:
