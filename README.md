@@ -141,6 +141,28 @@ for i in *.wav; do sox $i -r 16000 ../outdir/$i ; done
 ```iconv -f from-encoding -t to-encoding inputfile(s) -o outputfile```
 
 
+
+## compress/decompress directory 
+### compress
+
+```tar -zcvf archive-name.tar.gz directory-name```
+
+Where,
+
+* -z: Compress archive using gzip program
+* -c: Create archive
+* -v: Verbose i.e display progress while creating archive
+* -f: Archive File name
+
+### decompress
+
+```tar -zxvf archive-name.tar.gz directory-name```
+
+Where,
+
+* -x: Extract files
+
+
 ## clean linux swap:
 ```sudo swapoff -a```
 
