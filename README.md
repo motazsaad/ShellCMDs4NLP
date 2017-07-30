@@ -129,7 +129,10 @@ cd wavdir
 for i in *.wav; do sox $i -r 16000 ../outdir/$i ; done
 ```
 
-
+## convert mp3 to wav 
+```
+for f in *.mp3; do wav_name="${f%.*}"; ffmpeg -i $f -ar 16000 -ac 1 ${wav_name}.wav; done
+```
 
 ## convert file to unicode 
 1. determine file encoding 
@@ -141,6 +144,8 @@ for i in *.wav; do sox $i -r 16000 ../outdir/$i ; done
 ```iconv -f from-encoding -t to-encoding inputfile(s) -o outputfile```
 
 
+### show duplicate lines 
+```sort filename | uniq -c | sort -nr```
 
 ## compress/decompress directory 
 ### compress
