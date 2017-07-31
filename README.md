@@ -154,7 +154,10 @@ done
 printf "total duration in minutes: %.2f minutes\n" $(python -c "print($total_duration/60)")
 printf "total duration in hours: %.2f hours\n" $(python -c "print($total_duration/60/60)")
 ```
-
+## extract text between parenthesis
+```
+cat file | cut -d "[" -f2 | cut -d "]" -f1 > outfile 
+```
 
 ## convert file to unicode 
 1. determine file encoding 
