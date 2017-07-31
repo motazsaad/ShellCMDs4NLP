@@ -28,6 +28,11 @@ sed -i filename -re '16224,16482d'
 ## delete all whitespaces
 ```tr -d ' ' < input.txt > output.txt```
 
+## remove Arabic diacritics 
+```
+sed -e 's/َ//g' -e 's/ُ//g' -e 's/ِ//g' -e 's/ّ//g' -e 's/ً//g' -e 's/ٌ//g' -e 's/ٍ//g' -e 's/ْ//g' file 
+```
+
 ## split a file (based on number of lines for each split):
 ```split -l 8 -a 4 -d file.ext```
 
