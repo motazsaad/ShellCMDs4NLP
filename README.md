@@ -33,6 +33,19 @@ sed -i filename -re '16224,16482d'
 sed -e 's/َ//g' -e 's/ُ//g' -e 's/ِ//g' -e 's/ّ//g' -e 's/ً//g' -e 's/ٌ//g' -e 's/ٍ//g' -e 's/ْ//g' file 
 ```
 
+
+## extract text between ```<s>``` and ```</s>```
+```sed -n 's:.*<s>\(.*\)</s>.*:\1:p' file > outfile```
+
+## remove all leading and trailing whitespace from end of each line:
+cat file | sed 's/^[ \t]*//;s/[ \t]*$//' > outfile
+
+## extract text between ```<s>``` and ```</s>``` tag and remove all leading and trailing whitespaces (in one step)
+
+```sed -n 's:.*<s>\(.*\)</s>.*:\1:p' file | sed 's/^[ \t]*//;s/[ \t]*$//' > outfile```
+
+
+
 ## split a file (based on number of lines for each split):
 ```split -l 8 -a 4 -d file.ext```
 
