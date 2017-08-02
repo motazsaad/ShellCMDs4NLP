@@ -59,7 +59,8 @@ cat file | sed 's/^[ \t]*//;s/[ \t]*$//' > outfile
 ```
 sed -e 's/[(][^)]*[)]//g' file
 ```
-
+##  Remove or Replace the Last Word of Each Line
+sed 's/\w*$//' file 
 
 ## split a file (based on number of lines for each split):
 ```split -l 8 -a 4 -d file.ext```
