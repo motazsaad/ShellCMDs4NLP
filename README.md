@@ -33,6 +33,16 @@ sed -i filename -re '16224,16482d'
 sed -e 's/َ//g' -e 's/ُ//g' -e 's/ِ//g' -e 's/ّ//g' -e 's/ً//g' -e 's/ٌ//g' -e 's/ٍ//g' -e 's/ْ//g' file 
 ```
 
+## remove punctuation
+```
+sed -i -e "s/[[:punct:]]\+//g" file
+```
+
+## remove arabic punctuation 
+```
+sed -i -e 's/؟//g' -e 's/،//g' -e 's/؛//g' file 
+```
+
 
 ## extract text between ```<s>``` and ```</s>```
 ```sed -n 's:.*<s>\(.*\)</s>.*:\1:p' file > outfile```
@@ -44,6 +54,11 @@ cat file | sed 's/^[ \t]*//;s/[ \t]*$//' > outfile
 
 ```sed -n 's:.*<s>\(.*\)</s>.*:\1:p' file | sed 's/^[ \t]*//;s/[ \t]*$//' > outfile```
 
+
+## remove text between parenthesis (includeing parenthesis) 
+```
+sed -e 's/[(][^)]*[)]//g' file
+```
 
 
 ## split a file (based on number of lines for each split):
