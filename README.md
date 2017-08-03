@@ -62,6 +62,9 @@ sed -e 's/[(][^)]*[)]//g' file
 ##  Remove or Replace the Last Word of Each Line
 sed 's/\w*$//' file 
 
+## add suffix for each line
+```awk '{print $0 " suffix"}' infile```
+
 ## split a file (based on number of lines for each split):
 ```split -l 8 -a 4 -d file.ext```
 
