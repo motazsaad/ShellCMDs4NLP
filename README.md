@@ -28,6 +28,9 @@ sed -i filename -re '16224,16482d'
 ## delete all whitespaces
 ```tr -d ' ' < input.txt > output.txt```
 
+## replace whitespaces with one space 
+```sed 's/  */ /g' file```
+
 ## remove Arabic diacritics 
 ```
 sed -e 's/َ//g' -e 's/ُ//g' -e 's/ِ//g' -e 's/ّ//g' -e 's/ً//g' -e 's/ٌ//g' -e 's/ٍ//g' -e 's/ْ//g' file 
@@ -48,7 +51,7 @@ sed -i -e 's/؟//g' -e 's/،//g' -e 's/؛//g' file
 ```sed -n 's:.*<s>\(.*\)</s>.*:\1:p' file > outfile```
 
 ## remove all leading and trailing whitespace from end of each line:
-cat file | sed 's/^[ \t]*//;s/[ \t]*$//' > outfile
+```cat file | sed 's/^[ \t]*//;s/[ \t]*$//' > outfile```
 
 ## extract text between ```<s>``` and ```</s>``` tag and remove all leading and trailing whitespaces (in one step)
 
@@ -136,11 +139,14 @@ Here each file contains 8 lines
 
 
 ## remove empty lines and \n from files 
-```sed -i '/^\s*$/d' *```
+```sed -i '/^\s*$/d' file```
 
-```sed -i '/^[[:space:]]*$/d' *```
+```sed -i '/^[[:space:]]*$/d' file```
 
-```perl -i -p -e 's/\n/ /' *```
+```perl -i -p -e 's/\n/ /' file```
+
+## remove all digits from a text file:
+```sed 's/[0-9]*//g' file```
 
 
 ## replace match with something: replace string1 with string2 
