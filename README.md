@@ -29,7 +29,9 @@ sed -i filename -re '16224,16482d'
 ```tr -d ' ' < input.txt > output.txt```
 
 ## replace whitespaces with one space 
-```sed 's/  */ /g' file```
+```
+sed -i 's/  */ /g'file
+```
 
 ## remove Arabic diacritics 
 ```
