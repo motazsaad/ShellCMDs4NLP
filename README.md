@@ -115,6 +115,9 @@ Here each file contains 8 lines
 ```ls -l dir/* | grep 'Oct' | awk '{print $9}' | xargs cp -t dir/```
 
 
+## cat too much files 
+```find dir/ -name "*" -exec cat "{}" >> outfile \;```
+
 ## split xml file nodes (one node in each file)
 ```xml_split -l 1 dir/*```
 
