@@ -1,5 +1,7 @@
 # CMU sphinx Installation steps
 
+Inspired from [https://bangladroid.wordpress.com/2017/02/16/installing-cmu-sphinx-on-ubuntu/] 
+
 ## install dependacies 
 ```
 sudo apt-get install gcc automake autoconf libtool bison swig python-dev libpulse-dev
