@@ -81,6 +81,23 @@ Here each file contains 8 lines
 ## split 90% based on lines:
 ```split -l $[ $(wc -l filename|cut -d" " -f1) * 90 / 100 ] filename``` 
 
+## rename files (add prefix)
+```for f in * ; do mv "$f" "PRE_$f" ; done```
+
+## list files with path 
+ls -d dir/* > file.list 
+
+## remove spaces from file names 
+```
+for f in *.ext; do mv "$f" "${f// /_}"; done
+``` 
+
+or 
+
+```
+rename 's/ /_/' *.ext 
+```
+
 ## configure language on linux:
 ```dpkg-reconfigure locales```
 
