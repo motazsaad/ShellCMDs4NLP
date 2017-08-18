@@ -291,7 +291,7 @@ ngram -lm your.lm -ppl test-text.txt
 
 ## ARPA model training with CMUCLMTK
 
-1) Prepare a reference text that will be used to generate the language model. The language model toolkit expects its input to be in the form of normalized text files, with utterances delimited by <s> and </s> tags.
+1) Prepare a reference text that will be used to generate the language model. The language model toolkit expects its input to be in the form of normalized text files, with utterances delimited by ```<s>``` and ```</s>``` tags.
 
 2) Generate the vocabulary file. This is a list of all the words in the file: 
  
