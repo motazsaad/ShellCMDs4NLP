@@ -1,4 +1,11 @@
 # CMU sphinx Installation steps
+
+## install dependacies 
+```
+sudo apt-get install gcc automake autoconf libtool bison swig python-dev libpulse-dev
+```
+
+
 ## sphinxbase
 ```
 git clone https://github.com/cmusphinx/sphinxbase.git
