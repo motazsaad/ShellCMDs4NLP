@@ -209,7 +209,7 @@ do
     s_rate=$(sox --i -r "$file")
     channels=$(sox --i -c "$file")
     filename=$(basename "$file")
-    printf "duration: %s sample rate: %s channels: %d file:%s\n" "$duration" "$s_rate" "$channels" "$filename">> wav.info
+    printf "duration: %s sample rate: %s channels: %d file:%s\n" "$duration" "$s_rate" "$channels" "$filename"
 done
 printf "total duration in minutes: %.2f minutes\n" $(python -c "print($total_duration/60)")
 printf "total duration in hours: %.2f hours\n" $(python -c "print($total_duration/60/60)")
