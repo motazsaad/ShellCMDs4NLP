@@ -20,6 +20,10 @@ To create a new container, you should start by choosing a base image with the OS
 ## download the base image to our server
 ```sudo docker pull ubuntu```
 
+or 
+
+```sudo docker pull ubuntu:14.04```
+
 ## see all downloaded images
 ```sudo docker images```
 
