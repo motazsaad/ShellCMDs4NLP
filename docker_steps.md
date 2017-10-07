@@ -30,8 +30,16 @@ or
 ## create a container from that image
 ```sudo docker create ubuntu:16.04```
 
+or 
+
+```sudo docker create ubuntu:14.04```
+
 ## start the container 
 ```docker run -i -t ubuntu:16.04 /bin/bash```
+
+or 
+
+```docker run -i -t ubuntu:14.04 /bin/bash```
 
 This command will create and run a container based in ubuntu 16.04 image and run a command /bin/bash inside the container, you will be automatically inside the container after running the command. 
 
