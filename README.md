@@ -1,8 +1,13 @@
 # Useful Linux Shell Commands for NLP people
 
 
+
 ## count vocabulary in a corpus.
 ```cat files | tr ' ' '\n' | sort | uniq  | wc -w```
+
+## word frequency of a corpus 
+```cat corpus_file | tr ' ' '\n' | sort | uniq -c > outfile.freq```
+
 
 ## extract a specific range of lines from a file 
 ```sed -n 16224,16482p filename > newfile```
