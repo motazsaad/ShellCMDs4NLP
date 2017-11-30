@@ -14,10 +14,10 @@
 
 ## delete a specific range of lines from a file 
 ```
-sed -i <file> -re '<start>,<end>d'
+sed -n '<start>,<end>p' filename
 ```
 ```
-sed -i filename -re '16224,16482d'
+sed -n '16224,16482p' filename
 ```
 
 ## delete only the whitespaces at the beginning of one single line
