@@ -6,7 +6,7 @@
 ```cat files | tr ' ' '\n' | sort | uniq  | wc -w```
 
 ## word frequency of a corpus 
-```cat corpus_file | tr ' ' '\n' | sort | uniq -c > outfile.freq```
+```cat corpus_file | tr ' ' '\n' | sort | uniq -c > outfile.freq
 
 
 ## extract a specific range of lines from a file 
@@ -14,10 +14,10 @@
 
 ## delete a specific range of lines from a file 
 ```
-sed -n '<start>,<end>p' filename
+sed -i <file> -re '<start>,<end>d'
 ```
 ```
-sed -n '16224,16482p' filename
+sed -i filename -re '16224,16482d'
 ```
 
 ## delete only the whitespaces at the beginning of one single line
