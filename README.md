@@ -6,7 +6,7 @@
 ```cat files | tr ' ' '\n' | sort | uniq  | wc -w```
 
 ## word frequency of a corpus 
-```cat corpus_file | tr ' ' '\n' | sort | uniq -c > outfile.freq
+```cat corpus_file | tr ' ' '\n' | sort | uniq -c > outfile.freq```
 
 
 ## extract or display a specific range of lines from a file 
