@@ -10,7 +10,7 @@
 
 
 ## extract or display a specific range of lines from a file 
-```sed -n 16224,16482p filename > newfile```
+```sed -n '16224,16482p' filename > newfile```
 
 ## delete a specific range of lines from a file 
 ```
