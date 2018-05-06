@@ -6,7 +6,11 @@ Inspired from [https://bangladroid.wordpress.com/2017/02/16/installing-cmu-sphin
 ```
 sudo apt-get install gcc automake autoconf libtool bison swig python-dev libpulse-dev
 ```
-
+```
+# for  BLAS & LAPACK libs, which is needed by lda & mllt feature transforms 
+# see https://cmusphinx.github.io/wiki/ldamllt/ for more information 
+sudo apt-get install libblas-dev liblapack-dev
+```
 
 ## sphinxbase
 ```
