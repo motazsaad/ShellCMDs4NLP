@@ -26,7 +26,7 @@ sudo make install
 add new line /usr/local/lib
 ```
 sudo ldconfig
-ldconfig -p | grep local
+sudo ldconfig -p | grep local
 ```
 
 # pocketsphinx
