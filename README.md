@@ -86,6 +86,12 @@ Here each file contains 8 lines
 ## split 90% based on lines:
 ```split -l $[ $(wc -l filename|cut -d" " -f1) * 90 / 100 ] filename``` 
 
+## split 90% based on shuffled lines with shuf command:
+```shuf filename | split -l $[ $(wc -l filename|cut -d" " -f1) * 90 / 100 ]``` 
+
+## split 90% based on shuffled lines with sort command:
+```sort -R filename | split -l $[ $(wc -l filename|cut -d" " -f1) * 90 / 100 ]``` 
+
 ## rename files (add prefix)
 ```for f in * ; do mv "$f" "PRE_$f" ; done```
 
