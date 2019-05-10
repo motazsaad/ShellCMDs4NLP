@@ -1,4 +1,4 @@
-# Instaltion 
+# Installation 
 ## install docker with the apt command:
 ```sudo apt-get install -y docker.io```
 
@@ -11,7 +11,7 @@
 ## check the docker version
 ```docker version```
 
-# Docker commmands 
+# Docker commands 
 
 To create a new container, you should start by choosing a base image with the OS, e.g. ubuntu or centos or windows ... 
 
@@ -43,7 +43,7 @@ or
 
 This command will create and run a container based in ubuntu 16.04 image and run a command /bin/bash inside the container, you will be automatically inside the container after running the command. 
 
-**or simple your can srart it by **
+**or simple your can start it by **
 ```sudo docker run -it ubuntu```
 
 The combination of the -i and -t switches gives you interactive shell access into the container
